@@ -28,7 +28,7 @@ public class WebSocketChatServerTest {
         webDriver = new HtmlUnitDriver();
         webDriver.get("http://localhost:8080");
         WebElement username = webDriver.findElement(By.name("username"));
-        username.sendKeys("akshar");
+        username.sendKeys("pradeep");
 
         WebElement login_form = webDriver.findElement(By.className("submit"));
         login_form.click();
@@ -38,7 +38,7 @@ public class WebSocketChatServerTest {
             public Boolean apply(WebDriver d) {
                 WebElement username1 = webDriver.findElement(By.id("username"));
                 System.out.println("username: " + username1.getText());
-                return username1.getText().equals("akshar");
+                return username1.getText().equals("pradeep");
             }
         });
     }
